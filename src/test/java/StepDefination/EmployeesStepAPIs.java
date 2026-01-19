@@ -128,7 +128,10 @@ public void user_add_request_body_to_http_put_request() {
 @When("user select the HTTP put Request")
 public void user_select_the_http_put_request() {
 	response = httpRequest.put("Employee/" + id);
+	System.out.println("Confict removed");
 }
+
+
 	
 	
 	
