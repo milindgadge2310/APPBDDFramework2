@@ -101,6 +101,36 @@ public class EmployeesStepAPIs {
 
 @When("user select the HTTP GET Request")
 public void user_select_the_http_get_request() {
-	response = httpRequest.get("employees/" + id);
+	response = httpRequest.get("Employee/" + id);
+	
 }
+
+@Given("user create request body for put request")
+public void user_create_request_body_for_put_request() {
+
+	JSONObject json = new JSONObject();
+	json.put("firstName", "Prasad");
+	json.put("lastName", "Sathe");
+	json.put("address", "Mumbai");
+	json.put("mobileNumber", 222222);
+	json.put("gender", "male");
+
+	putRequestBody = json.toString();
+
 }
+
+@Given("user add request body to http put request")
+public void user_add_request_body_to_http_put_request() {
+	httpRequest.body(putRequestBody);
+
+}
+
+@When("user select the HTTP put Request")
+public void user_select_the_http_put_request() {
+	response = httpRequest.put("Employee/" + id);
+}
+	
+	
+	
+}
+

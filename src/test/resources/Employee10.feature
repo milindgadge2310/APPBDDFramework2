@@ -23,3 +23,16 @@ Feature: Test All Employees APIs
     And user capture response time
     And user capture response body
     And user capture response headers
+    
+    Scenario: Update whole Entity using PUT Request
+    Given user configure Base URI
+    And user get the Request Specification object
+    And user add content type request header
+    And user create request body for put request
+    And user add request body to http put request
+    When user select the HTTP put Request
+    Then user capture status code
+    And user capture status line
+    And user capture response time
+    And user capture response body
+    And user capture response headers
