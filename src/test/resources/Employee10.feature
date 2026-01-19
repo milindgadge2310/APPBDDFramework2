@@ -13,3 +13,13 @@ Feature: Test All Employees APIs
     And user capture response body
     And user capture response headers
     And user capture id from response body
+
+  Scenario: Retrieve the Created new Entity using GET Request
+    Given user configure Base URI
+    And user get the Request Specification object
+    When user select the HTTP GET Request
+    Then user capture status code
+    And user capture status line
+    And user capture response time
+    And user capture response body
+    And user capture response headers
