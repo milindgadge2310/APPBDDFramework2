@@ -99,4 +99,8 @@ public class EmployeesStepAPIs {
 		System.out.println(id);
 	}
 
+@When("user select the HTTP GET Request")
+public void user_select_the_http_get_request() {
+	response = httpRequest.get("employees/" + id);
+}
 }
